@@ -5,6 +5,7 @@ import { createUserDocumentFromAuth } from "../utils/firebase/firebase.utils";
 import Button from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
 
+
 import "./sign-in-form.styles.scss";
 
 const defaultFormFields = {
@@ -15,17 +16,10 @@ const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
+
   const handleGoogleUser = async () => {
-    try {
-      const { user } = await signInWithGooglePopup();
-      const userDocRef = await createUserDocumentFromAuth(user);
-      console.log(user);
-      console.log(userDocRef);
-      console.log("Googled");
-    } catch (error) {
-      console.log("Error");
-    }
-  };
+    await signInWithGooglePopup();
+  }
 
   const handleChange = async (event) => {
     const { name, value } = event.target;
@@ -48,8 +42,10 @@ const SignInForm = () => {
         email,
         password
       );
+      
       resetFormFields();
-      console.log(user);
+      
+      console.log(user)
       console.log("Signed User in !");
     } catch (error) {
       switch (error.code) {
