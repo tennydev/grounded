@@ -1,10 +1,3 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-
- <g>
-  <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" id="svg_1" y="5000" x="287" stroke-width="0" stroke="#000" fill="#000000">GROUNDED</text>
- </g>
-</svg>
-
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
 <path style="fill:#fdfdfd; stroke:none;" d="M0 0L0 1024L960 1024L960 1008L1024 1008L1024 0L0 0z"/>
