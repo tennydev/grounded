@@ -9,8 +9,11 @@ import { ReactComponent as Logo } from "../../../assets/crown.svg";
 import CartIcon from "../../cart-icon/cart-icon.component";
 import CartDropdown from "../../cart-dropdown/cart-dropdown.component";
 
+import { CartContext } from "../../contexts/cart.context";
+
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
+  const {isCartOpen} = useContext(CartContext);
 
   return (
     <Fragment>
@@ -34,7 +37,7 @@ const Navigation = () => {
           )}
           <CartIcon />
         </div>
-        <CartDropdown/>
+        {isCartOpen && <CartDropdown/>}
       </div>
       <Outlet />
     </Fragment>
