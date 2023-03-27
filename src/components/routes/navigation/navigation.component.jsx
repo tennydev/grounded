@@ -4,7 +4,7 @@ import { Fragment, useContext } from "react";
 import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
-import { ReactComponent as Logo } from "../../../assets/crown.svg";
+import { ReactComponent as Logo } from "../../../assets/icon.svg";
 
 import CartIcon from "../../cart-icon/cart-icon.component";
 import CartDropdown from "../../cart-dropdown/cart-dropdown.component";
@@ -14,6 +14,7 @@ import { CartContext } from "../../contexts/cart.context";
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
   const {isCartOpen} = useContext(CartContext);
+
 
   return (
     <Fragment>

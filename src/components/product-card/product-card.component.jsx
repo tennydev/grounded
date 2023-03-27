@@ -6,11 +6,10 @@ import { CartContext } from "../contexts/cart.context";
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
-  const { cartItems,addItemToCart } = useContext(CartContext); // import addItemToCart from CartContext
+  const { addItemToCart } = useContext(CartContext); // import addItemToCart from CartContext
 
   const handleAddToCart = () => {
     addItemToCart(product);
-    console.log(cartItems);
 };
 
   return (

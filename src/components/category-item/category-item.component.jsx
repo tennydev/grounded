@@ -1,7 +1,8 @@
-import './category-item.styles.scss';
+import "./category-item.styles.scss";
 
-const CategoryItem = ({category}) => {
-const {title,id,subtitle,imageUrl} = category;
+const CategoryItem = ({ category }) => {
+  const { title, id, subtitle, imageUrl } = category;
+
   return (
     <div className="category-container" key={id}>
       <div
@@ -9,8 +10,10 @@ const {title,id,subtitle,imageUrl} = category;
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
       <div className="category-info-container">
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <h2 className={subtitle ? "with-subtitle" : "without-subtitle"}>
+          {title}
+        </h2>
+        {subtitle && <p className="subtitle">{subtitle}</p>}
       </div>
     </div>
   );
