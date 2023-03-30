@@ -43,4 +43,17 @@
       border: none;
     }
   }
+
+  &.transparent {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      border: none;
+    }
+  }
+
 }

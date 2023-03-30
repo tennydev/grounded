@@ -19,7 +19,7 @@ const CartItem = ({ cartItem }) => {
         <span className="name">{name}</span>
         <span className="price">{`$${price}`}</span>
         <span className="quantity">{`Quantity: ${quantity}`}</span>
-        <Button className="remove-icon" onClick={handleRemoveFromCart}>X</Button>
+        <Button className="remove-icon" buttonType={"transparent"} onClick={handleRemoveFromCart}>X</Button>
         </div>
       </div>
     );
